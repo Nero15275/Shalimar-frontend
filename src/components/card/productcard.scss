@@ -1,0 +1,11 @@
+.card{
+   margin: 2rem;
+   position: relative;
+   height:20rem
+}
+.desc{
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
