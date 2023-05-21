@@ -17,7 +17,9 @@ const ProductCard = (props: any) => {
     const handelAddToCart = (productItem: any) => {
         addToCart(productItem)
         toast('Item Added to Cart')
-        navigate('/cart')
+        setTimeout(() => {
+            navigate('/cart')
+        }, 1000);
 
     }
 
