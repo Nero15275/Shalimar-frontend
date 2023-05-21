@@ -18,3 +18,13 @@
   white-space: nowrap;
   overflow: hidden;
 }
+@media (max-width: 740px) {
+  .cart-card{
+    width: 23.75rem
+  }
+}
+@media (max-width: 440px) {
+  .cart-card{
+    width: 18.75rem
+  }
+}
