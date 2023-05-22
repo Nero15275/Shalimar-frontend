@@ -8,3 +8,29 @@
 Appbar{
    width: 100%;
 }
+.cart-box-nav{
+    border-radius: 5px;
+    border: 1px solid #e7e7e7;
+    margin: 0 0 20px 0;
+    height: 47px;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+   .text-title{
+    font-size: 13px;
+    color: #2e2e2e;
+    font-weight: 500;
+    padding: 4px 10px 4px 10px;
+    font-weight: bold;
+    display: inline-block; 
+    line-height:2.6;
+    cursor: pointer;
+   }
+   .cart-icon{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #273c92;
+    cursor: pointer;
+    padding: 4px 10px 4px 10px;
+   }
+}

@@ -18,7 +18,8 @@ export const addToCart = async (product: any) => {
     let body = {
         productid: product._id,
         quantity: 1,
-        price: product.price
+        price: product.price,
+        discount: product.discount
     }
 
 
