@@ -71,7 +71,7 @@ const Home = () => {
                     {product?.map((ele: any) => {
                         return (
 
-                            <ProductCard key={ele.name} product={ele} styleProp={200} />
+                            <ProductCard key={ele.name} product={ele} styleProp={250} />
 
                         )
                     })

@@ -11,17 +11,19 @@ const OfferComponent = () => {
 
 
         }).catch(err => console.log(err));
-
-
-
     }, [])
+
+
+    let offerProductList = product.filter((ele: any) => {
+        return ele.hasOffer === true
+    })
     return (
         <div className="rootcontainer">
             <div className={'container'}>
-                {product?.map((ele: any) => {
+                {offerProductList?.map((ele: any) => {
                     return (
 
-                        <ProductCard key={ele.name} product={ele} styleProp={200} />
+                        <ProductCard key={ele.name} product={ele} styleProp={250} />
 
                     )
                 })

@@ -26,7 +26,7 @@ const ProductCard = (props: any) => {
     return (
         <Card sx={{ maxWidth: styleProp }} className='card'>
             <CardMedia
-                sx={{ height: 140 }}
+                sx={{ height: 200 }}
                 image={product.img}
                 title="green iguana"
             />
@@ -38,10 +38,24 @@ const ProductCard = (props: any) => {
                     {product.description}
 
                 </Typography>
-                <Typography variant="h6" color="text.danger" >
-                    Price: {product.price}
+                {product.hasOffer ? <div>
+                    <s> <Typography variant="h6" color="text.danger" >
+                        Price: ₹ {product.price}
 
-                </Typography>
+                    </Typography></s>
+                    <Typography variant="h6" color="text.danger" >
+                        Offer Price: ₹ {product.price - product.discount}
+
+                    </Typography>
+                    <Typography variant="body2" color="text.danger" >
+                        You save: ₹ {product.discount}
+
+                    </Typography>
+                </div> : <Typography variant="h6" color="text.danger" >
+                    Price: ₹ {product.price}
+
+                </Typography>}
+
             </CardContent>
             <CardActions>
                 <Button size="small">Buy</Button>

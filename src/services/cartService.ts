@@ -39,3 +39,15 @@ export const deleteItemFromCart = async (id: any) => {
     })
 
 }
+
+export const updateCartItem = async (product: any) => {
+    let body = {
+        quantity: product.quantity + 1
+    }
+    await axios.put(`${baseUrl}/cart/update/${product._id}`, body).then((response) => {
+        console.log(response);
+    }).catch((error) => {
+        console.log(error);
+    })
+
+}

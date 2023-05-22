@@ -8,10 +8,12 @@ const PriceComponent = (props: any) => {
      const carrBagPrice = 10
      let discount = 0
      cartItems.forEach((item: any) => {
-          console.log('====================================');
-          console.log(item);
-          console.log('====================================');
+
           totalprice += item.price * item.quantity
+     })
+     cartItems.forEach((item: any) => {
+
+          discount += item.discount * item.quantity
      })
      paymentAmount = totalprice + carrBagPrice - discount
 
@@ -35,7 +37,7 @@ const PriceComponent = (props: any) => {
                          </div>
                          <div className="body-row">
                               <div className="title">Discount</div>
-                              <div className="pricing">₹0</div>
+                              <div className="pricing">₹{discount}</div>
                          </div>
                          <div className="body-row">
                               <div className="title">Total</div>
