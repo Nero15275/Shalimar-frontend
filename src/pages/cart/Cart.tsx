@@ -56,7 +56,7 @@ const Cart = () => {
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <Button size="small">Buy</Button>
+
                                             <Button size="small" color='warning' onClick={() => handleDelete(item._id)}>Delete</Button>
                                         </CardActions>
                                     </div>
