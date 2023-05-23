@@ -32,5 +32,15 @@ Appbar{
     background-color: #273c92;
     cursor: pointer;
     padding: 4px 10px 4px 10px;
+    .badge{
+    
+    background-color: red;
+    color: #fff;
+    height: 18px;
+    width: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    }
    }
 }

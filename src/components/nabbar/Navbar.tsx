@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link, useNavigate } from 'react-router-dom';
 // import AdbIcon from '@mui/icons-material/Adb';
 import './navbar.scss'
+import { cartcount, getAllcart } from '../../services/cartService';
 
 const pages = [{ name: 'home', route: '/' }];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -22,6 +23,16 @@ function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
     const navigate = useNavigate()
+    React.useEffect(() => {
+
+        getAllcart().then((item) => {
+            console.log(item);
+
+        }).catch((err) => {
+            console.log(err)
+        })
+
+    }, [])
 
     const handleClickCart = () => {
         navigate('/cart')
@@ -72,6 +83,7 @@ function Navbar() {
                         <div className="text-title">My cart</div>
                         <div className='cart-icon'>
                             <img src="https://totalfoods.in/static/images/top_cart.png" alt="" />
+                            <div className="badge">{cartcount}</div>
                         </div>
 
                     </Box>

@@ -108,7 +108,7 @@ const AddressComponent = () => {
                             handleChange(event)
                         }}
                     />
-                    <Button size="small" color='success' onClick={handleSubmit}>Save Address</Button>
+                    <Button size="small" style={{ marginTop: '5px' }} color='success' onClick={handleSubmit}>Save Address</Button>
                 </div>
             </div>
 

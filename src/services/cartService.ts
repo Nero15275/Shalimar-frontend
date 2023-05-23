@@ -1,5 +1,6 @@
 import axios from 'axios';
 const baseUrl = 'https://shalimarbackend.onrender.com'
+export let cartcount = 0
 
 
 
@@ -7,10 +8,12 @@ export const getAllcart = async () => {
     let cartItems
     await axios.get(`${baseUrl}/cart/getall`).then((response) => {
         cartItems = response.data
+        cartcount = response.data.length
     }).catch((error) => {
         console.log(error);
 
     })
+
     return cartItems
 }
 
