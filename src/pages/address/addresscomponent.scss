@@ -1,0 +1,24 @@
+.address-container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 100%;
+    .address-card{
+        margin-top: 5rem;
+        width: 40%;
+    }
+    .address-form{
+        margin-top: 5rem;
+        width: 40%;
+        .form-input{
+            margin: 5px ;
+        }
+    }
+  
+}
+.rootAddresscontainer{
+    width:100vw
+}

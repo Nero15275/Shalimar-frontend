@@ -24,7 +24,7 @@ export const addToCart = async (product: any) => {
 
 
     await axios.post(`${baseUrl}/cart/addtocart`, body).then((response) => {
-        console.log(response);
+
     }).catch((error) => {
         console.log(error);
     })
@@ -33,7 +33,7 @@ export const addToCart = async (product: any) => {
 export const deleteItemFromCart = async (id: any) => {
 
     await axios.delete(`${baseUrl}/cart/delete/${id}`).then((response) => {
-        console.log(response);
+
     }).catch((error) => {
         console.log(error);
     })
@@ -45,7 +45,7 @@ export const updateCartItem = async (product: any) => {
         quantity: product.quantity + 1
     }
     await axios.put(`${baseUrl}/cart/update/${product._id}`, body).then((response) => {
-        console.log(response);
+
     }).catch((error) => {
         console.log(error);
     })

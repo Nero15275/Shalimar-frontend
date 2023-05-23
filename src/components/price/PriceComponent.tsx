@@ -1,6 +1,8 @@
 import React from 'react'
 import './pricecomponent.scss'
+import { useNavigate } from 'react-router-dom'
 const PriceComponent = (props: any) => {
+     const navigate = useNavigate()
      const { cartItems } = props
 
      let totalprice = 0
@@ -17,6 +19,9 @@ const PriceComponent = (props: any) => {
      })
      paymentAmount = totalprice + carrBagPrice - discount
 
+     const handleCheckout = () => {
+          navigate('/address')
+     }
 
      return (
           <div>
@@ -45,7 +50,7 @@ const PriceComponent = (props: any) => {
                          </div>
 
                     </div>
-                    <div className="checkout">Checkout</div>
+                    <div className="checkout" onClick={handleCheckout}>Checkout</div>
                </div>
           </div>
      )
